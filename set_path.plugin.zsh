@@ -14,11 +14,11 @@ then
 fi
 
 if [[ -d "$HOME/go/bin" ]]; then
-    export PATH="$PATH:$HOME/go/bin"
+    path+="$HOME/go/bin"
 fi
 
 if [[ -d "$HOME/edirect" ]]; then
-    export PATH="$PATH:$HOME/edirect"
+    path+="$HOME/edirect"
 fi
 
 # Use alternate vim marks [[[ and ]]] as the original ones can
