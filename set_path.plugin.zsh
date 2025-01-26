@@ -17,6 +17,11 @@ if [[ -d "$HOME/go/bin" ]]; then
     path+="$HOME/go/bin"
 fi
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [[ -f "/Applications/Tailscale.app/Contents/MacOS/Tailscale" && ! -f "$(brew --prefix tailscale 2>/dev/null)/bin/tailscale" ]]; then
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+  fi
+fi
 
 # Use alternate vim marks [[[ and ]]] as the original ones can
 # confuse nested substitutions, e.g.: ${${${VAR}}}
