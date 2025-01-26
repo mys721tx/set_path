@@ -17,9 +17,6 @@ if [[ -d "$HOME/go/bin" ]]; then
     path+="$HOME/go/bin"
 fi
 
-if [[ -d "$HOME/edirect" ]]; then
-    path+="$HOME/edirect"
-fi
 
 # Use alternate vim marks [[[ and ]]] as the original ones can
 # confuse nested substitutions, e.g.: ${${${VAR}}}
